@@ -73,7 +73,7 @@ $ npm install --save-dev eslint-config-prettier
 $ touch eslint.config.js
 ```
 
-3. Add new contents inside our ESLint configuration file. And add `"type": "module"` inside package.json. Then lint code of project files to test the ESLint function.
+3. Add new contents inside our ESLint configuration file. Then lint code of project files to test the ESLint function.
 
 ```
 $ npx eslint .
