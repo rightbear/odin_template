@@ -1,6 +1,6 @@
 # odin_template
 
-The template repository to initial practices in The Odin Project
+The template repository to initialize practices in The Odin Project
 
 ## Install Webpack Process:
 
@@ -79,7 +79,7 @@ $ touch eslint.config.js
 $ npx eslint .
 ```
 
-4. If linting is finished, create somw Prettier configuration files in the project root. One is an empty config file and another is .prettierignore file. Add new contents inside the .prettierrc file.
+4. If linting is finished, create somw Prettier configuration files in the project root. One is an empty config file and another is .prettierignore file. Add new contents inside the .prettierrc file if you need.
 
 ```
 $ node --eval "fs.writeFileSync('.prettierrc','{}\n')"

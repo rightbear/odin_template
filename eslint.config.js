@@ -1,19 +1,19 @@
-import globals from 'globals'
-import { defineConfig } from 'eslint/config'
-import js from '@eslint/js'
-import eslintConfigPrettier from 'eslint-config-prettier/flat'
+import globals from "globals";
+import { defineConfig } from "eslint/config";
+import js from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
   {
-    files: ['**/*.js'],
+    files: ["**/*.js"],
     plugins: {
       js,
     },
-    extends: ['js/recommended'],
-    ignores: ['**/*.config.js', 'node_modules/**', 'dist/**'],
+    extends: ["js/recommended"],
+    ignores: ["**/*.config.js", "node_modules/**", "dist/**"],
     rules: {
-      'no-unused-vars': 'warn',
-      'no-undef': 'warn',
+      "no-unused-vars": "warn",
+      "no-undef": "warn",
     },
     languageOptions: {
       globals: {
@@ -26,11 +26,11 @@ export default defineConfig([
     },
     linterOptions: {
       // report unused disable and enable directives
-      reportUnusedDisableDirectives: 'error',
+      reportUnusedDisableDirectives: "error",
 
       // report unused eslint inline config comments
-      reportUnusedInlineConfigs: 'error',
+      reportUnusedInlineConfigs: "error",
     },
   },
   eslintConfigPrettier,
-])
+]);
