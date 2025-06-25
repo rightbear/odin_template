@@ -100,6 +100,26 @@ $ npx prettier . --write
 
 7. All ESLint and Prettier commands are tested. Enjoy building your new project!
 
+## Use Template Process:
+
+1. Choose "odin_template" in "Repository template" field, when creating new repository in Github.
+
+2. Open the folder of repository. If package.json is already in the folder, download all npm packages in package.json directly. You should navigate to the path of folder containing package.json before the downloading.
+
+```
+$ npm install
+```
+
+3. After the downloading is finished, you can direcly use the following commands in your project.
+
+```
+$ npm run dev
+$ npm run build
+$ npx eslint .
+$ npx prettier . --check
+$ npx prettier . --write
+```
+
 ## Commit Process:
 
 1. Make a new branch called 'gh-pages'. You only need to do this the first time you deploy. The rest of the steps should be done every time you deploy or redeploy your project.
