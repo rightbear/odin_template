@@ -10,7 +10,7 @@ The template repository to initialize practices in The Odin Project
 $ npm init -y
 ```
 
-2. Open package.json. If you see `"type": "commonjs"` or `"type": "module"` inside, remove it. Add three scripts inside our package.json. Then download new npm packages.
+2. Open package.json. If you see `"type": "commonjs"` or `"type": "module"` inside, remove it. Add three scripts inside our `package.json`. Then download new npm packages.
 
 ```
 $ npm install --save-dev webpack webpack-cli
@@ -79,7 +79,7 @@ $ touch eslint.config.js
 $ npx eslint .
 ```
 
-4. If linting is finished, create somw Prettier configuration files in the project root. One is an empty config file and another is .prettierignore file. Add new contents inside the .prettierrc file if you need.
+4. If linting is finished, create somw Prettier configuration files in the project root. One is an empty config file and another is `.prettierignore` file. Add new contents inside the .prettierrc file if you need.
 
 ```
 $ node --eval "fs.writeFileSync('.prettierrc','{}\n')"
@@ -104,7 +104,7 @@ $ npx prettier . --write
 
 1. Choose "odin_template" in "Repository template" field, when creating new repository in Github.
 
-2. Open the folder of repository. If package.json is already in the folder, download all npm packages in package.json directly. You should navigate to the path of folder containing package.json before the downloading.
+2. Open the folder of repository. If `package.json` is already in the folder, download all npm packages in `package.json` directly. You should navigate to the path of folder containing package.json before the downloading.
 
 ```
 $ npm install
@@ -118,6 +118,55 @@ $ npm run build
 $ npx eslint .
 $ npx prettier . --check
 $ npx prettier . --write
+```
+
+## Test JavaScript Files Process 
+
+1. If you only want to use `node` to test a single JavaScript file and your main Node.js application file is `main.js`, you can call it by typing the following command.
+```
+$ node main.js
+```
+
+2. You can also embed this information into your JavaScript file with a "shebang" line. The "shebang" is the first line in the file, and tells the OS which interpreter to use for running the script.
+```
+#!/usr/bin/node
+
+// your code
+```
+
+3. You can tell the OS to run env with node as the following parameter instead.
+```
+#!/usr/bin/env node
+
+// your code
+```
+
+4. To use a shebang, your file should have executable permission. You can give `main.js` the executable permission by running the following command.
+```
+$ chmod u+x main.js
+```
+
+5. The `node` command has to be re-executed in bash whenever there is a change in the application. To restart the application automatically, use the `nodemon` module. Install the nodemon module globally to system path. Or, you can also install `nodemon` as a development dependency.
+```
+$ npm i -g nodemon
+
+// or
+
+$ npm i --save-dev nodemon
+```
+
+6. This local installation of `nodemon` can be run by calling it from within npm script.
+```
+$ npm start
+
+// or
+
+$ npx nodemon
+```
+
+7. If you only want to use `nodemon` to test a single JavaScript file, run the application using the following `nodemon` command followed by the application's file name. The file will be restarted automatically.
+```
+$ nodemon main.js
 ```
 
 ## Commit Process:
