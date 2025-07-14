@@ -79,7 +79,7 @@ $ touch eslint.config.js
 $ npx eslint .
 ```
 
-4. If linting is finished, create somw Prettier configuration files in the project root. One is an empty config file and another is `.prettierignore` file. Add new contents inside the .prettierrc file if you need.
+4. If linting is finished, create some Prettier configuration files in the project root. One is an empty config file and another is `.prettierignore` file. Add new contents inside the .prettierrc file if you need.
 
 ```
 $ node --eval "fs.writeFileSync('.prettierrc','{}\n')"
