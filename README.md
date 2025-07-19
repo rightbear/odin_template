@@ -49,7 +49,7 @@ $ npm run build
 
 7. If the bundle is finished, you will see a new folder called 'dist' is created in the project root. Run Live Server (Live Server is on http://localhost:5500/). Then open the browser and check your devtool in the browser. If you see the sentence "Hello, Odinite!" is printed in the console, the bundle function is working well.
 
-8. Terminate Live Server. Then ceate a .gitignore file in the root of your project. Add new contents inside the .gitignore file.
+8. Terminate Live Server. Then ceate a .gitignore file in the root of your project. Add new contents inside our .gitignore file.
 
 ```
 $ touch .gitignore
@@ -67,13 +67,13 @@ $ npm install --save-dev --save-exact prettier
 $ npm install --save-dev eslint-config-prettier
 ```
 
-2. Create the basic ESLint configuration file in the project root.
+2. Create the basic ESLint configuration file in the project root. Add new contents inside our ESLint configuration file.
 
 ```
 $ touch eslint.config.js
 ```
 
-3. Add new contents inside our ESLint configuration file. Then lint code of project files to test the ESLint function.
+3. Then use lint code of project files to test the ESLint function.
 
 ```
 $ npx eslint .
@@ -100,6 +100,55 @@ $ npx prettier . --write
 
 7. All ESLint and Prettier commands are tested. Enjoy building your new project!
 
+## Install Jest & Babel Process:
+
+1. Install Jest using npm package manager
+
+```
+$ npm install --save-dev jest
+```
+
+2. Open package.json. If you see `"test": "echo \"Error: no test specified\" && exit 1"` inside, replace it with `"test": "jest"`.
+
+3. In order for us to be able to use ES6 modules in Jest, we should use Babel. To use Babel, install required dependencies.
+
+```
+$ npm install --save-dev babel-jest @babel/core @babel/preset-env
+```
+
+4. Configure Babel to target your current version of Node by creating a Babel configuration file in the root of your project. Add new contents inside our Babel configuration file.
+
+```
+$ touch babel.config.js
+```
+
+5. Get into the 'src' folder. Then create some JavaScript files for testing in the folder.
+
+```
+$ cd src && touch sum.js sum.test.js
+```
+
+6. Add new contents inside our two JavaScript files in 'src' folder. Then back in the project root. Finally, run our test command.
+
+```
+$ npm run test
+```
+
+7. Check the terminal and you will see Jest print the following message in the terminal. It means Jest is working well.
+
+```
+> jest
+
+ PASS  src/sum.test.js
+  ✓ adds 1 + 2 to equal 3 (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.561 s, estimated 1 s
+Ran all test suites.
+```
+
 ## Use Template Process:
 
 1. Choose "odin_template" in "Repository template" field, when creating new repository in Github.
@@ -120,9 +169,9 @@ $ npx prettier . --check
 $ npx prettier . --write
 ```
 
-## Test JavaScript Files Process 
+## Run JavaScript Files Process 
 
-1. If you only want to use `node` to test a single JavaScript file and your main Node.js application file is `main.js`, you can call it by typing the following command.
+1. If you only want to use `node` to run a single JavaScript file and your main Node.js application file is `main.js`, you can call it by typing the following command.
 ```
 $ node main.js
 ```
@@ -164,7 +213,7 @@ $ npm start
 $ npx nodemon
 ```
 
-7. If you only want to use `nodemon` to test a single JavaScript file, run the application using the following `nodemon` command followed by the application's file name. The file will be restarted automatically.
+7. If you only want to use `nodemon` to run a single JavaScript file, run the application using the following `nodemon` command followed by the application's file name. The file will be restarted automatically.
 ```
 $ nodemon main.js
 ```
