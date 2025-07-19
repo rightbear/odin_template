@@ -154,13 +154,13 @@ Ran all test suites.
 
 1. Choose "odin_template" in "Repository template" field, when creating new repository in Github.
 
-2. Open the folder of repository. If `package.json` is already in the folder, download all npm packages in `package.json` directly. You should navigate to the path of folder containing `package.json` before the downloading.
+2. Now the new repository is created. If `package.json` and `package.json` is already in the folder, remember to change the content of 'name' field and 'description' field in `package.json`. Also change the content of 'name' field in `package-lock.json`. You should modify the above fields based on the details of your project.
+
+3. Open the folder of repository. If `package.json` is already in the folder, download all npm packages in `package.json` directly. You should navigate to the path of folder containing `package.json` before the downloading.
 
 ```
 $ npm install
 ```
-
-3. After the downloading is finished, remember to change the content of 'name' field and 'description' field in `package.json`. Also change the content of 'name' field in `package-lock.json`. You should modify the above content based on the details of your new repository.
 
 4. After the downloading is finished, you can direcly use the following commands in your project.
 
