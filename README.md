@@ -4,13 +4,13 @@ The template repository to initialize practices in The Odin Project
 
 ## Install Webpack Process:
 
-1. Create a new directory for our new project, then create a package.json file in it.
+1. Create a new directory for our new project, then create a `package.json` file in it.
 
 ```
 $ npm init -y
 ```
 
-2. Open package.json. If you see `"type": "commonjs"` or `"type": "module"` inside, remove it. Add three scripts inside our `package.json`. Then download new npm packages.
+2. Open `package.json`. If you see `"type": "commonjs"` or `"type": "module"` inside, remove it. Add three scripts inside our `package.json`. Then download new npm packages.
 
 ```
 $ npm install --save-dev webpack webpack-cli
@@ -49,7 +49,7 @@ $ npm run build
 
 7. If the bundle is finished, you will see a new folder called 'dist' is created in the project root. Run Live Server (Live Server is on http://localhost:5500/). Then open the browser and check your devtool in the browser. If you see the sentence "Hello, Odinite!" is printed in the console, the bundle function is working well.
 
-8. Terminate Live Server. Then ceate a .gitignore file in the root of your project. Add new contents inside our .gitignore file.
+8. Terminate Live Server. Then ceate a `.gitignore` file in the root of your project. Add new contents inside our `.gitignore` file.
 
 ```
 $ touch .gitignore
@@ -108,7 +108,7 @@ $ npx prettier . --write
 $ npm install --save-dev jest
 ```
 
-2. Open package.json. If you see `"test": "echo \"Error: no test specified\" && exit 1"` inside, replace it with `"test": "jest"`.
+2. Open `package.json`. If you see `"test": "echo \"Error: no test specified\" && exit 1"` inside, replace it with `"test": "jest"`.
 
 3. In order for us to be able to use ES6 modules in Jest, we should use Babel. To use Babel, install required dependencies.
 
@@ -140,12 +140,13 @@ $ npm run test
 > jest
 
  PASS  src/sum.test.js
-  ✓ adds 1 + 2 to equal 3 (3 ms)
+  my calculation
+    ✓ adds 1 + 2 to equal 3 (3 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        0.561 s, estimated 1 s
+Time:        0.634 s, estimated 1 s
 Ran all test suites.
 ```
 
@@ -153,30 +154,35 @@ Ran all test suites.
 
 1. Choose "odin_template" in "Repository template" field, when creating new repository in Github.
 
-2. Open the folder of repository. If `package.json` is already in the folder, download all npm packages in `package.json` directly. You should navigate to the path of folder containing package.json before the downloading.
+2. Open the folder of repository. If `package.json` is already in the folder, download all npm packages in `package.json` directly. You should navigate to the path of folder containing `package.json` before the downloading.
 
 ```
 $ npm install
 ```
 
-3. After the downloading is finished, you can direcly use the following commands in your project.
+3. After the downloading is finished, remember to change the content of 'name' field and 'description' field in `package.json`. Also change the content of 'name' field in `package-lock.json`. You should modify the above content based on the details of your new repository.
+
+4. After the downloading is finished, you can direcly use the following commands in your project.
 
 ```
 $ npm run dev
 $ npm run build
+$ npm run test
 $ npx eslint .
 $ npx prettier . --check
 $ npx prettier . --write
 ```
 
-## Run JavaScript Files Process 
+## Run JavaScript Files Process
 
 1. If you only want to use `node` to run a single JavaScript file and your main Node.js application file is `main.js`, you can call it by typing the following command.
+
 ```
 $ node main.js
 ```
 
 2. You can also embed this information into your JavaScript file with a "shebang" line. The "shebang" is the first line in the file, and tells the OS which interpreter to use for running the script.
+
 ```
 #!/usr/bin/node
 
@@ -184,6 +190,7 @@ $ node main.js
 ```
 
 3. You can tell the OS to run env with node as the following parameter instead.
+
 ```
 #!/usr/bin/env node
 
@@ -191,11 +198,13 @@ $ node main.js
 ```
 
 4. To use a shebang, your file should have executable permission. You can give `main.js` the executable permission by running the following command.
+
 ```
 $ chmod u+x main.js
 ```
 
 5. The `node` command has to be re-executed in bash whenever there is a change in the application. To restart the application automatically, use the `nodemon` module. Install the nodemon module globally to system path. Or, you can also install `nodemon` as a development dependency.
+
 ```
 $ npm i -g nodemon
 
@@ -205,6 +214,7 @@ $ npm i --save-dev nodemon
 ```
 
 6. This local installation of `nodemon` can be run by calling it from within npm script.
+
 ```
 $ npm start
 
@@ -214,6 +224,7 @@ $ npx nodemon
 ```
 
 7. If you only want to use `nodemon` to run a single JavaScript file, run the application using the following `nodemon` command followed by the application's file name. The file will be restarted automatically.
+
 ```
 $ nodemon main.js
 ```
